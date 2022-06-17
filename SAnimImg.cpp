@@ -30,14 +30,14 @@ namespace SOUI
 	    CRect rcSkin = GetClientRect();
 	    if(m_aniStatus == STATUS_IN && m_pAniIn)
 	    {
-	        m_pAniIn->Draw(pRT,rcSkin,m_iFrame);
+	        m_pAniIn->DrawByIndex(pRT,rcSkin,m_iFrame);
 	    }else if(m_aniStatus == STATUS_OUT && m_pAniOut)
 	    {
-	        m_pAniOut->Draw(pRT,rcSkin,m_iFrame);
+	        m_pAniOut->DrawByIndex(pRT,rcSkin,m_iFrame);
 	    }
 		else if (m_pAniIn)
 		{//默认显示in动画的第一幅
-			m_pAniIn->Draw(pRT,rcSkin,0);
+			m_pAniIn->DrawByIndex(pRT,rcSkin,0);
 		}
 	}
  

@@ -25,7 +25,7 @@
 class CSystemObjectRegister : public ISystemObjectRegister
 {
 public:
-	void RegisterWindows(SObjectFactoryMgr *objFactory)
+	void RegisterWindows(SObjectFactoryMgr *objFactory) const override
 	{
 		objFactory->TplRegisterFactory<SWindow>();
 		objFactory->TplRegisterFactory<SPanel>();
@@ -41,7 +41,7 @@ public:
 		objFactory->TplRegisterFactory<STabPage>();
 	}
 
-	void RegisterSkins(SObjectFactoryMgr *objFactory)
+	void RegisterSkins(SObjectFactoryMgr *objFactory) const override
 	{
 		objFactory->TplRegisterFactory<SSkinImgList>();
 		objFactory->TplRegisterFactory<SSkinImgFrame>();
@@ -50,7 +50,7 @@ public:
 		objFactory->TplRegisterFactory<SSkinImgCenter>();
 	}
 
-	void RegisterLayouts(SObjectFactoryMgr *objFactory)
+	void RegisterLayouts(SObjectFactoryMgr *objFactory) const override
 	{
 		objFactory->TplRegisterFactory<SouiLayout>();
 	}
